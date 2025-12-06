@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Children of Simin – Official Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Official website for Children of Simin, a fantasy novel about an island city, forgotten children, and a rebellion against oppression." />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #111417;
+      color: #e9edf1;
+      line-height: 1.6;
+    }
+
+    a { color: #ffd271; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: radial-gradient(circle at top, #293444, #0a0d10 60%);
+      padding: 1.5rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-title {
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.85;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Georgia", "Times New Roman", serif;
+      color: #ffe4a3;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      margin: 0.25rem 0 0.5rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-left p {
+      max-width: 38rem;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9fb3d4;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      border: 1px solid #ffd271;
+      background: #ffd271;
+      color: #231815;
+      font-weight: 600;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #ffd271;
+    }
+
+    .book-mockup {
+      border-radius: 0.75rem;
+      border: 1px solid #293444;
+      background: radial-gradient(circle at top left, #243145, #06070a);
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #b5c0cf;
+    }
+
+    .book-rectangle {
+      width: 140px;
+      height: 210px;
+      margin: 0 auto 0.75rem;
+      border-radius: 0.4rem;
+      border: 1px solid #435066;
+      background: linear-gradient(135deg, #1f2833, #283c4f, #452b28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Georgia", serif;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    .muted {
+      color: #96a2b4;
+      font-size: 0.9rem;
+    }
+
+    .two-cols {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    ul {
+      margin: 0.25rem 0 0.75rem 1.2rem;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 0.25rem;
+    }
+
+    .card {
+      border-radius: 0.75rem;
+      border: 1px solid #283445;
+      background: rgba(11, 15, 21, 0.85);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      border-top: 1px solid #222a35;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #7f8a99;
+    }
+
+    @media (max-width: 768px) {
+      .hero, .two-cols {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .nav {
+        justify-content: center;
+      }
+      .nav-links {
+        width: 100%;
+        text-align: center;
+      }
+      .nav-links a {
+        margin: 0 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="nav-title">Children of Simin</div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About the Author</a>
+        <a href="#world">World of Simin</a>
+        <a href="#maps">Maps & Extras</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME / HERO -->
+    <section id="home">
+      <div class="hero">
+        <div class="hero-left">
+          <div class="tagline">A city built on cliffs. A people forced into the mines. Children who refuse to disappear.</div>
+          <h1>Children of Simin</h1>
+          <p>
+            On the island-city of Simin, the Radoni villagers are dragged from their homes and forced underground to dig coal for a distant king. 
+            When a group of children escape a massacre and vanish into the mountains, their survival becomes the spark that could ignite a rebellion.
+          </p>
+          <p class="muted">
+            A grounded fantasy about power, guilt, and the courage of forgotten people – with no dragons, no magic, only humans trying to stay human.
+          </p>
+          <div class="cta-buttons">
+            <!-- Replace the # with your real Amazon links when ready -->
+            <a href="#" class="btn">Buy on Amazon</a>
+            <a href="#sample" class="btn btn-outline">Read a Free Sample</a>
+          </div>
+        </div>
+        <div class="book-mockup">
+          <div class="book-rectangle">
+            Book Cover<br />Placeholder
+          </div>
+          <div>Cover art coming soon – your final cover will appear here.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT AUTHOR -->
+    <section id="about">
+      <h2>About the Author</h2>
+      <div class="two-cols">
+        <div>
+          <p>
+            Mehmet Ceran is a writer and IT professional based in Europe. His debut novel,
+            <em>Children of Simin</em>, was first published in Turkish and has already reached hundreds of readers
+            drawn to its mix of political tension, intimate character work, and grounded worldbuilding.
+          </p>
+          <p>
+            He writes about ordinary people trapped inside extraordinary systems: miners, villagers, children, and old kings who can no longer
+            escape the consequences of their own decisions.
+          </p>
+          <p>
+            This English edition is the first step in bringing the world of Simin to international readers. A sequel is currently in progress.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Stay in Touch</h3>
+          <p class="muted">
+            In the future you can add a real newsletter form here (Mailchimp, ConvertKit, etc.).
+            For now, readers can reach you via the contact section below.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORLD OF SIMIN / GLOSSARY -->
+    <section id="world">
+      <h2>World of Simin</h2>
+      <p>
+        Welcome to Simin – an island city carved between sea and cliffs, ruled by kings, haunted by old stories,
+        and kept alive by miners, villagers, and children who refuse to disappear.
+      </p>
+      <p class="muted">
+        Use this guide as you read: who is who, what is where, and which words belong to the Radoni and the mines.
+      </p>
+
+      <h3>Radoni & Villagers</h3>
+      <p><strong>Vasi</strong> – Villager, the informal leader of the uprising among the Radoni.</p>
+      <p><strong>Musaf</strong> – Villager; Vala’s father.</p>
+      <p><strong>Ludak</strong> – Villager.</p>
+      <p><strong>Vala</strong> – One of the surviving Radoni children; stubborn, brave, marked by loss.</p>
+      <p><strong>Zin</strong> – Palace attendant and Vala’s childhood friend, caught between the palace and the Radoni world.</p>
+
+      <h3>Elders, Healers & Storytellers</h3>
+      <p><strong>Ela Ana</strong> – Shaman and healer of the Radoni; singer of ancient songs, carrying deep herbal knowledge and folk wisdom.</p>
+      <p><strong>Dede</strong> – Elder storyteller of myths and old tales; a spiritual guide who keeps memory alive.</p>
+
+      <h3>Royalty & Nobility</h3>
+      <p><strong>King Ilge</strong> – Elderly king of Simin. Once rational and wise, now consumed by guilt and fear.</p>
+      <p><strong>Anka</strong> – Princess of Simin, daughter of King Ilge; young, intelligent, sensitive, and more clear-sighted than most at court.</p>
+      <p><strong>King Otto</strong> – King of Phrygia; cunning, ruthless, and ambitious.</p>
+      <p><strong>Bisma</strong> – Handsome prince of Phrygia, son of King Otto; Anka’s forced betrothed.</p>
+
+      <h3>Phrygian Officials & Power Brokers</h3>
+      <p><strong>Luf</strong> – Phrygia’s ambassador in Simin; in his fifties, sly and opportunistic.</p>
+      <p><strong>Plene</strong> – Phrygian officer; engineer and city planner.</p>
+      <p><strong>Jin</strong> – Old, frail aide who once served King Ilge and still remembers the old days of the court.</p>
+      <p><strong>Admiral Hanza</strong> – Phrygian naval commander.</p>
+      <p><strong>Ani</strong> – Steward of the commander’s residence in Simin.</p>
+      <p><strong>Ala</strong> – Maid working in the commander’s residence.</p>
+      <p><strong>Lemur</strong> – Phrygia’s spymaster and political manipulator in Simin; moves information and people like pieces on a board.</p>
+
+      <h3>Simin Officials & Military</h3>
+      <p><strong>Kam Elder Pol</strong> – Elder of the kams; the highest religious authority of Simin.</p>
+      <p><strong>Commander Anseba</strong> – Military commander of Simin.</p>
+      <p><strong>Lida</strong> – Administrator responsible for managing the Radoni inside the city.</p>
+      <p><strong>Ishkar</strong> – Informer, moving between worlds and carrying stories to those in power.</p>
+      <p><strong>Yamu</strong> – One of the main commanders of the Simin army.</p>
+      <p><strong>Amil</strong> – One of the main commanders of the Simin army.</p>
+
+      <h3>Miners, Radoni & Common Folk</h3>
+      <p><strong>Blinds</strong> – Group of experienced miners who have lost their sight after years working in the dark tunnels.</p>
+      <p><strong>Koroglu Rafi</strong> – Son of a blind miner; called Koroglu, “son of a blind.”</p>
+      <p><strong>Mamo</strong> – Commander of the mines; brutal, merciless, feared by the prisoners and workers.</p>
+
+      <h3>Old Stories & Legendary Figures</h3>
+      <p><strong>Esme</strong> – Builder of the first storm-resistant houses in the city, shaping how Simin survives harsh weather.</p>
+      <p><strong>Argun</strong> – Shepherd who initiates the construction of the fortress after the second great flood. Becomes leader of Simin for a decade; remembered as a wise builder and protector, not as a tyrant.</p>
+      <p><strong>Barat</strong> – One of six young sailors washed ashore in Simin; the one who introduces coal to King Otto and changes the island’s fate.</p>
+
+      <h3>Survivors & Companions</h3>
+      <p><strong>Rider</strong> – Explorer and map-maker, crossing the island and seas.</p>
+      <p><strong>Kavaf</strong> – Rider’s loyal horse.</p>
+      <p><strong>Atani</strong> – Wolf who becomes Vala’s companion and protector.</p>
+
+      <h3>Children of the Mountains</h3>
+      <p><strong>Eli</strong> – Boy; curious and quick to ask questions.</p>
+      <p><strong>Yash</strong> – Boy; emotional, sensitive, always hungry.</p>
+      <p><strong>Itap</strong> – Boy; harsh, outspoken, says what others only think.</p>
+      <p><strong>Ann</strong> – Girl; quiet and withdrawn, devoted to caring for her baby brother.</p>
+      <p><strong>Asya</strong> – Girl; fearful of heights and easily panicked, but trying to be brave.</p>
+      <p><strong>Sem</strong> – Boy; lively, initiates games, the first to dare and climb the rope ladder.</p>
+      <p><strong>Hortu</strong> – Baby; Ann’s tiny brother, carried and protected by the others.</p>
+      <p><strong>Elli</strong> – Girl; endlessly curious, full of questions about the world.</p>
+
+      <h3>Places of Simin – Districts</h3>
+      <p><strong>Miners’ Quarter (Madenci Mahallesi)</strong> – District of Simin clinging to the cliffs, home to many miners and their families.</p>
+      <p><strong>Radoni Quarter (Radoni Mahallesi)</strong> – District north of the fortress; the area assigned to the Radoni once they are brought inside the city.</p>
+      <p><strong>Migrants’ Quarter</strong> – District where newcomers and displaced people settle inside Simin.</p>
+      <p><strong>Fishermen’s Quarter</strong> – Coastal district east of the palace, tied to the sea and daily catch.</p>
+      <p><strong>Marketplace (çarşı)</strong> – Busy commercial area that appears alongside the Fishermen’s Quarter.</p>
+      <p><strong>Great Square (Büyük Meydan)</strong> – Central public square of Simin where crowds gather, speeches are made, and sometimes sentences are carried out.</p>
+      <p><strong>Blue Cove</strong> – Small, hidden inlet east of the palace; a sheltered corner of sea and rock.</p>
+      <p><strong>New Settlement</strong> – Newly planned district meant to reshape how the city will grow.</p>
+
+      <h3>Places of Simin – Strongholds & Landmarks</h3>
+      <p><strong>Great Temple</strong> – Principal temple building and square; the heart of religious life in the city.</p>
+      <p><strong>Fortress</strong> – The prison and keep of Simin; a symbol of control, fear, and “protection.”</p>
+      <p><strong>Citadel</strong> – The walled inner city and palace compound where the royal family and high officials live.</p>
+      <p><strong>Southern Pass Cave</strong> – A cave in the southern mountain pass; a hidden refuge about a day’s ride from the city.</p>
+      <p><strong>Graveyard of the Unclaimed</strong> – Burial ground for the poorest and unclaimed dead.</p>
+
+      <h3>Wider Geography</h3>
+      <p><strong>Simin</strong> – Both the island and its main city.</p>
+      <p><strong>Morgu</strong> – The great mountain that dominates the island’s landscape.</p>
+      <p><strong>Durlaz</strong> – Village at the entrance of the Valley of the Doves; later emptied by soldiers.</p>
+      <p><strong>Valley of the Doves (Güvercin Vadisi)</strong> – A valley on the island, known as a quiet, beautiful landmark.</p>
+
+      <h3>Key Terms & Concepts</h3>
+      <p><strong>Kam</strong> – Spiritual and religious leader of Simin.</p>
+      <p><strong>Kam Elder</strong> – Head of the kams; the highest spiritual authority.</p>
+      <p><strong>Radoni</strong> – Plural demonym for the villagers and mining people brought from the countryside. Used collectively, as in “the Radoni”.</p>
+      <p><strong>Manga</strong> – Work gang or squad of miners in the tunnels.</p>
+      <p><strong>Bere</strong> – A cavern or hollow that a tunnel unexpectedly breaks into; dangerous, often sealed with timber.</p>
+      <p><strong>Saule</strong> – Divine force and protector deity invoked by the people of Simin.</p>
+      <p><strong>Atlas</strong> – Rider’s carefully drawn maps of Simin and its surroundings.</p>
+      <p><strong>Army of Equality</strong> – Royal army organized under the promise of equality, later used to bring the Radoni into the city for forced labor.</p>
+      <p><strong>Checkers</strong> – Simple board game played by children and adults.</p>
+      <p><strong>Pıslanpatır</strong> – Children’s hide-and-seek game.</p>
+      <p><strong>Yellow star (sarı yıldız)</strong> – Badge civilians must wear to walk freely under occupation and curfew.</p>
+      <p><strong>Domalan</strong> – A type of truffle found in the region; a small delicacy of the land.</p>
+
+    </section>
+
+    <!-- MAPS & EXTRAS -->
+    <section id="maps">
+      <h2>Maps & Extras</h2>
+      <p>
+        Here you will soon find downloadable maps of Simin and Morgu, a pronunciation guide, and other extras.
+      </p>
+      <p class="muted">
+        Once your map files are ready, we can add images and download links on this page
+        without changing the rest of the site structure.
+      </p>
+    </section>
+
+    <!-- SAMPLE / FREE CHAPTER -->
+    <section id="sample">
+      <h2>Read a Free Sample</h2>
+      <p>
+        You can paste the first chapter or a short excerpt of <em>Children of Simin</em> here,
+        or link directly to Amazon’s “Look Inside” feature once the book is live.
+      </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        For reader messages, collaboration, or review inquiries, you can reach the author at:
+      </p>
+      <p><strong>Email:</strong> <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+      <p class="muted">
+        Replace the email address above with your real author email.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Children of Simin – Mehmet Ceran
+  </footer>
+
+  <script>
+    // Set current year in footer automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
