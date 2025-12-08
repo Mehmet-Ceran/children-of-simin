@@ -1,19 +1,446 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <title>Simin'in Çocukları – Türkçe</title>
-  <link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8" />
+  <title>Simin'in Çocukları – Resmî Site (Türkçe)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Simin'in Çocukları romanının Türkçe tanıtım sayfası. Karakterler, Simin şehrinin haritası ve yazar hakkında bilgiler." />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #111417;
+      color: #e9edf1;
+      line-height: 1.6;
+    }
+
+    a { color: #ffd271; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: radial-gradient(circle at top, #293444, #0a0d10 60%);
+      padding: 1.5rem 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-title {
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      opacity: 0.85;
+    }
+
+    .nav-links a:hover {
+      opacity: 1;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      scroll-margin-top: 80px;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: "Georgia", "Times New Roman", serif;
+      color: #ffe4a3;
+      margin-top: 0;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.4rem;
+    }
+
+    p {
+      margin: 0.25rem 0 0.5rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .hero-left p {
+      max-width: 38rem;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #9fb3d4;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      border: 1px solid #ffd271;
+      background: #ffd271;
+      color: #231815;
+      font-weight: 600;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #ffd271;
+    }
+
+    .book-mockup {
+      border-radius: 0.75rem;
+      border: 1px solid #293444;
+      background: radial-gradient(circle at top left, #243145, #06070a);
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #b5c0cf;
+    }
+
+    .book-rectangle {
+      width: 140px;
+      height: 210px;
+      margin: 0 auto 0.75rem;
+      border-radius: 0.4rem;
+      border: 1px solid #435066;
+      background: linear-gradient(135deg, #1f2833, #283c4f, #452b28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Georgia", serif;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    .muted {
+      color: #96a2b4;
+      font-size: 0.9rem;
+    }
+
+    .two-cols {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 2rem;
+    }
+
+    ul {
+      margin: 0.25rem 0 0.75rem 1.2rem;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 0.25rem;
+    }
+
+    .card {
+      border-radius: 0.75rem;
+      border: 1px solid #283445;
+      background: rgba(11, 15, 21, 0.85);
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      border-top: 1px solid #222a35;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #7f8a99;
+    }
+
+    @media (max-width: 768px) {
+      .hero, .two-cols {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .nav {
+        justify-content: center;
+      }
+      .nav-links {
+        width: 100%;
+        text-align: center;
+      }
+      .nav-links a {
+        margin: 0 0.5rem;
+      }
+    }
+  </style>
 </head>
-
 <body>
-  <nav>
-    <a href="/">English</a>
-    <a href="/tr/">Türkçe</a>
-  </nav>
+  <header>
+    <div class="nav">
+      <div class="nav-title">Simin'in Çocukları</div>
+      <div class="nav-links">
+        <a href="#home">Ana Sayfa</a>
+        <a href="#about">Yazar Hakkında</a>
+        <a href="#world">Simin'in Dünyası</a>
+        <a href="#maps">Harita & Ekler</a>
+        <a href="#contact">İletişim</a>
+        <a href="/">English</a>
+      </div>
+    </div>
+  </header>
 
-  <h1>Simin'in Çocukları</h1>
-  <p>Bu kitap … (your TR version text)</p>
+  <main>
+    <!-- ANA SAYFA / HERO -->
+    <section id="home">
+      <div class="hero">
+        <div class="hero-left">
+          <div class="tagline">Uçurumların üzerine kurulmuş bir şehir. Madenlere sürülen bir halk. Yok olmayı reddeden çocuklar.</div>
+          <h1>Simin'in Çocukları</h1>
+          <p>
+            Simin adasındaki şehirde, Radoni köylüleri evlerinden koparılıp yeraltına, uzak bir kral için kömür çıkarmaya zorlanır.
+            Bir katliamdan sağ kurtulup dağlara sığınan bir grup çocuk ise, hem kendi hayatları için hem de bütün ada için
+            geri dönülmez bir değişimin kıvılcımı hâline gelir.
+          </p>
+          <p class="muted">
+            Ejderhasız, büyüsüz, “sadece insanlardan” oluşan bir dünya. Gücün, suçluluğun ve unutulmuş insanların direnişinin hikâyesi.
+          </p>
+          <div class="cta-buttons">
+            <!-- Buraya Türkçe baskı için D&R / yayınevi linkini ekleyebilirsin -->
+            <a href="#" class="btn">Türkçe Baskıyı Satın Al</a>
+            <a href="#sample" class="btn btn-outline">Ücretsiz Örnek Oku</a>
+          </div>
+        </div>
+        <div class="book-mockup">
+          <div class="book-rectangle">
+            Kapak<br />Görseli
+          </div>
+          <div>Türkiye baskısının kapağını buraya ekleyebilirsin.</div>
+        </div>
+      </div>
+    </section>
 
+    <!-- YAZAR HAKKINDA -->
+    <section id="about">
+      <h2>Yazar Hakkında</h2>
+      <div class="two-cols">
+        <div>
+          <p>
+            Mehmet Ceran, Avrupa’da yaşayan bir yazar ve bilişim profesyoneli. İlk romanı
+            <em>Simin'in Çocukları</em>, önce Türkçe olarak yayımlandı ve madenlerde çalışan işçiler,
+            köylüler, çocuklar ve yaşlanmış krallar üzerinden hem politik hem duygusal bir hikâye anlattığı için
+            farklı yaşlardan okurlara ulaştı.
+          </p>
+          <p>
+            Ceran, olağanüstü güçlerin değil, insanın ve sistemlerin yarattığı baskının peşine düşüyor.
+            Onun karakterleri; görünmez işçiler, taşınan köylüler, korkmuş ama inatçı çocuklar ve yaptıklarının
+            sonuçlarından kaçamayan yöneticiler.
+          </p>
+          <p>
+            Romanın İngilizce baskısı da okurla buluşmak üzere. Yazar, Simin’in hikâyesini bir seri hâline getirip
+            ikinci kitabı 2026’da yayımlamayı planlıyor.
+          </p>
+        </div>
+        <div class="card" style="text-align:center;">
+          <img src="https://raw.githubusercontent.com/Mehmet-Ceran/children-of-simin/main/profile.jpg"
+               alt="Yazar fotoğrafı"
+               style="width:150px; border-radius:8px; margin-bottom:1rem;">
+          <h3>İletişim</h3>
+          <p>Geri bildirim, söyleşi veya iş birliği için bana buradan ulaşabilirsiniz:</p>
+          <p><strong><a href="mailto:m.ceran.2020@gmail.com">m.ceran.2020@gmail.com</a></strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SİMİN'İN DÜNYASI -->
+    <section id="world">
+      <h2>Simin'in Dünyası</h2>
+      <p>
+        Simin, denizle uçurumların arasına sıkışmış bir ada şehri. Kralların, madenlerin, Radoni köylülerinin
+        ve dağlara kaçmış çocukların bir arada sıkıştığı, nefes almakta zorlanan bir yer.
+      </p>
+      <p class="muted">
+        Aşağıda, romanda geçen bazı önemli karakterler ve kavramlar için kısa bir okuma rehberi bulacaksınız.
+        Spoiler içermemeye özen gösterdik.
+      </p>
+
+      <h3>Radoni & Köylüler</h3>
+      <p><strong>Vasi</strong> – Radonilerin içinden çıkan, isyanın öne çıkan isimlerinden köylü.</p>
+      <p><strong>Musaf</strong> – Köylü; Vala’nın babası.</p>
+      <p><strong>Ludak</strong> – Köylü.</p>
+      <p><strong>Vala</strong> – Katliamdan sağ kurtulan Radoni çocuklardan biri; inatçı, ketum, kayıpla damgalı.</p>
+      <p><strong>Illean</strong> – Çocuklardan biri; becerikli, kararlı, özellikle kaçış ve hayatta kalma konusunda kilit bir figür.</p>
+      <p><strong>Zin</strong> – Sarayda çalışan, Vala’nın çocukluk arkadaşı; saray ile Radoni dünyası arasında sıkışmış biri.</p>
+
+      <h3>Yaşlılar, Şifacılar, Anlatıcılar</h3>
+      <p><strong>Ela Ana</strong> – Radonilerin şifacısı ve şamanı; eski şarkılar söyleyen, bitkiler ve halk bilgisi konusunda derin bir hafızaya sahip.</p>
+      <p><strong>Dede</strong> – Eski hikâyelerin ve mitlerin anlatıcısı; çocuklara ve yetişkinlere sözlü tarih taşıyan bilge figür.</p>
+
+      <h3>Saray ve Krallık</h3>
+      <p><strong>Kral İlge</strong> – Simin’in yaşlı kralı. Bir zamanlar makul ve adilken, artık suçluluk ve korkunun altında ezilmiş durumda.</p>
+      <p><strong>Anka</strong> – Simin prensesi, Kral İlge’nin kızı; genç, zeki, hassas ve saraydaki çoğu kişiden daha net gören biri.</p>
+      <p><strong>Kral Otto</strong> – Frigya kralı; kurnaz, acımasız ve hırslı.</p>
+      <p><strong>Bisma</strong> – Kral Otto’nun yakışıklı oğlu, Frigya prensi; Anka’nın istemediği nişanlısı.</p>
+
+      <h3>Frigyalı Görevliler & Gölge Oyuncular</h3>
+      <p><strong>Luf</strong> – Simin’deki Frigya elçisi; ellili yaşlarında, fırsatçı ve kaypak.</p>
+      <p><strong>Plene</strong> – Frigyalı subay; mühendis ve şehir plancısı.</p>
+      <p><strong>Jin</strong> – Bir zamanlar Kral İlge’ye hizmet etmiş, yaşlı ve güçsüz bir yardımcı.</p>
+      <p><strong>Amiral Hanza</strong> – Frigya donanma komutanı.</p>
+      <p><strong>Ani</strong> – Komutan konutunun kâhyası.</p>
+      <p><strong>Ala</strong> – Komutan konutunda çalışan hizmetçi.</p>
+      <p><strong>Lemur</strong> – Frigya’nın Simin’deki istihbaratçısı ve siyasi manipülatörü; insanları ve bilgiyi satranç taşları gibi oynatır.</p>
+
+      <h3>Simin Görevlileri & Ordu</h3>
+      <p><strong>Kam Elder Pol</strong> – Kamlardan sorumlu yaşlı ruhani; Simin’in en yüksek dini otoritesi.</p>
+      <p><strong>Komutan Anseba</strong> – Simin ordusunun komutanı.</p>
+      <p><strong>Lida</strong> – Radonilerin şehir içindeki yönetiminden sorumlu idareci.</p>
+      <p><strong>Ishkar</strong> – Dedikodu ve bilgi taşıyan muhbir.</p>
+      <p><strong>Yamu</strong> – Simin ordusunun önde gelen komutanlarından biri.</p>
+      <p><strong>Amil</strong> – Simin ordusunun bir diğer önemli komutanı.</p>
+
+      <h3>Maden İşçileri, Radoniler & Halk</h3>
+      <p><strong>Körler (Blinds)</strong> – Yıllarca yeraltında çalışıp görme yetilerini kaybetmiş tecrübeli madenciler.</p>
+      <p><strong>Köroğlu Rafi</strong> – Kör bir madencinin oğlu; lakabı buradan geliyor.</p>
+      <p><strong>Mamo</strong> – Madenlerin komutanı; acımasız, zalim, herkesin korktuğu bir figür.</p>
+
+      <h3>Eski Hikâyelerden İsimler</h3>
+      <p><strong>Esme</strong> – Şehirdeki ilk fırtına dayanıklı evleri yapan kişi; Simin’in ayakta kalma biçimini değiştirmiştir.</p>
+      <p><strong>Argun</strong> – İkinci büyük selden sonra hisarın inşasını başlatan çoban; on yıl boyunca Simin’in lideri olur, bir zorba değil, koruyucu olarak hatırlanır.</p>
+      <p><strong>Barat</strong> – Simin kıyılarına vuran altı genç denizciden biri; kömürü Kral Otto’ya tanıtan kişi.</p>
+
+      <h3>Dağ Çocukları</h3>
+      <p><strong>Eli</strong> – Meraklı, sürekli soru soran bir oğlan.</p>
+      <p><strong>Yash</strong> – Duygusal, hassas ve sürekli aç olan bir çocuk.</p>
+      <p><strong>Itap</strong> – Sert ve açık sözlü; herkesin düşündüğünü o söyler.</p>
+      <p><strong>Ann</strong> – Sessiz, içine kapanık; tüm ilgisini bebek kardeşine vermiş bir kız.</p>
+      <p><strong>Asya</strong> – Yüksekten korkan, çabuk panikleyen ama elinden geldiğince cesur olmaya çalışan bir kız.</p>
+      <p><strong>Sem</strong> – Oyunları başlatan, hareketli bir çocuk; ip merdiveni ilk tırmananlardan.</p>
+      <p><strong>Hortu</strong> – Ann’in bebek kardeşi; grup onu birlikte taşır ve korur.</p>
+      <p><strong>Elli</strong> – Bitmek bilmeyen bir meraka sahip; dünyaya dair her şeye soru sorar.</p>
+
+      <h3>Simin'in Mahalleleri</h3>
+      <p><strong>Madenci Mahallesi</strong> – Uçurumlara yaslanmış, madencilerin ve ailelerinin yaşadığı mahalle.</p>
+      <p><strong>Radoni Mahallesi</strong> – Hisarın kuzeyinde, Radonilerin şehir içine taşındıktan sonra yerleştirildiği bölge.</p>
+      <p><strong>Göçmen Mahallesi</strong> – Şehre sonradan gelenlerin ve yerinden edilmiş insanların toplandığı mahalle.</p>
+      <p><strong>Balıkçı Mahallesi</strong> – Sarayın doğusunda, denizle iç içe yaşayan balıkçıların mahallesi.</p>
+      <p><strong>Çarşı</strong> – Balıkçı Mahallesi’ne komşu, hareketli pazar ve dükkânların olduğu bölge.</p>
+      <p><strong>Büyük Meydan</strong> – Şehrin merkezinde, halkın toplandığı, konuşmaların ve bazen de infazların yapıldığı meydan.</p>
+      <p><strong>Mavi Koy</strong> – Sarayın doğusunda, kayaların arasında kalmış küçük, saklı bir koy.</p>
+      <p><strong>Yeni Yerleşim</strong> – Şehrin geleceğini yeniden şekillendirmek için planlanan yeni mahalle.</p>
+
+      <h3>Kaleler, Tapınaklar, Önemli Yapılar</h3>
+      <p><strong>Büyük Tapınak</strong> – Şehrin ana tapınağı ve onun etrafındaki meydan; dini hayatın kalbi.</p>
+      <p><strong>Hisar</strong> – Simin’in zindanı ve kalesi; hem koruma hem de korku sembolü.</p>
+      <p><strong>Sur İçi / İç Kale (Citadel)</strong> – Sarayın ve yüksek görevlilerin yaşadığı, surlarla çevrili iç şehir.</p>
+      <p><strong>Güney Geçidi Mağarası</strong> – Şehrin güneyindeki geçitte yer alan mağara; bir günlük at yolculuğu mesafesinde, gizli bir sığınak.</p>
+      <p><strong>Sahipsizler Mezarlığı</strong> – Sahipsiz ve en yoksul ölülerin gömüldüğü mezarlık.</p>
+
+      <h3>Coğrafya & Kavramlar</h3>
+      <p><strong>Simin</strong> – Hem adanın hem de şehrin adı.</p>
+      <p><strong>Morgu</strong> – Adanın büyük dağı; şehre tepeden bakan kütle.</p>
+      <p><strong>Durlaz</strong> – Güvercin Vadisi’nin girişinde yer alan köy; askerler tarafından boşaltılır.</p>
+      <p><strong>Güvercin Vadisi</strong> – Adanın içlerinde, sakin ve akılda yer eden bir vadi.</p>
+
+      <h3>Özel Terimler</h3>
+      <p><strong>Kam</strong> – Simin’deki ruhani/dini lider.</p>
+      <p><strong>Kam Elder</strong> – Kamlardan sorumlu baş ruhani.</p>
+      <p><strong>Radoni</strong> – Köylerden taşınan, madenlere ve şehre zorla getirilen halk için kullanılan toplu ad.</p>
+      <p><strong>Manga</strong> – Madende birlikte çalışan işçi grupları.</p>
+      <p><strong>Bere</strong> – Tünelin açılırken bir anda açıldığı, tehlikeli oyuk veya boşluk; genellikle kalaslarla kapatılmaya çalışılır.</p>
+      <p><strong>Saule</strong> – Simin halkının dua ettiği, koruyucu ilahi güç.</p>
+      <p><strong>Atlas</strong> – Rider’ın Simin ve çevresine dair tuttuğu ayrıntılı haritalar.</p>
+      <p><strong>Eşitlik Ordusu</strong> – Başta “eşitlik” vaadiyle kurulan, sonra Radonileri şehre getirip zorla çalıştırmak için kullanılan ordu.</p>
+      <p><strong>Pıslanpatır</strong> – Çocukların oynadığı saklambaç türü oyun.</p>
+      <p><strong>Sarı yıldız</strong> – Sokağa çıkma ve kontrol dönemlerinde sivillerin kollarına takmak zorunda bırakıldıkları işaret.</p>
+      <p><strong>Domalan</strong> – Bölgeden çıkan, küçük ama kıymetli bir mantar türü (trüf).</p>
+    </section>
+
+    <!-- HARİTA & EKLER -->
+    <section id="maps">
+      <h2>Harita & Ekler</h2>
+      <p>
+        Aşağıda Simin şehrinin ve çevresinin bir haritasını görebilirsiniz. Okurken mahalleleri, hisarı,
+        iç kaleyi ve Morgu Dağı’nı takip etmek için kullanabilirsiniz.
+      </p>
+
+      <div class="card" style="text-align:center;">
+        <img 
+          src="https://raw.githubusercontent.com/Mehmet-Ceran/children-of-simin/main/Simin%20Map.png"
+          alt="Simin şehir haritası"
+          style="max-width:100%; height:auto; border-radius:8px; margin-bottom:0.75rem;">
+        <p class="muted">
+          Simin şehir haritası – İngilizce etiketli sürüm. İleride Türkçe etiketli bir versiyon da eklenecek.
+        </p>
+      </div>
+    </section>
+
+    <!-- ÖRNEK METİN -->
+    <section id="sample">
+      <h2>Ücretsiz Örnek Oku</h2>
+      <p>
+        Buraya romanın ilk bölümünden kısa bir alıntı ya da yayınevinin sağladığı örnek PDF bağlantısını ekleyebilirsin.
+      </p>
+      <p class="muted">
+        Örneğin: “İlk bölümü PDF olarak indirmek için buraya tıkla” gibi bir bağlantı koyabiliriz.
+      </p>
+    </section>
+
+    <!-- İLETİŞİM -->
+    <section id="contact">
+      <h2>İletişim</h2>
+      <p>
+        Okur geri bildirimleri, söyleşi davetleri veya yabancı dil baskılarıyla ilgili sorular için:
+      </p>
+      <p><strong>E-posta:</strong> <a href="mailto:m.ceran.2020@gmail.com">m.ceran.2020@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Simin'in Çocukları – Mehmet Ceran
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
