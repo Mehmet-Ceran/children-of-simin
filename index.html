@@ -212,6 +212,26 @@
         margin: 0 0.5rem;
       }
     }
+      /* Responsive + bigger book cover */
+      .book-rectangle img {
+        width: 260px;      /* bigger on desktop */
+        max-width: 100%;   /* prevent overflow */
+        height: auto;      /* keep proportions */
+        border-radius: 0.4rem;
+      }
+      
+      @media (max-width: 768px) {
+        .book-rectangle img {
+          width: 70%;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .book-rectangle img {
+          width: 85%;
+        }
+      }
+   
   </style>
 </head>
 <body>
@@ -256,9 +276,8 @@
         <div class="book-mockup">
           <div class="book-rectangle" style="padding:0; background:none; border:none;">
             <img 
-              src="https://raw.githubusercontent.com/Mehmet-Ceran/children-of-simin/main/simin_cover_tr.jpeg"
-              alt="Simin'in Çocukları – Türkçe kapak"
-              style="width:140px; height:auto; border-radius:0.4rem;">
+            src="https://raw.githubusercontent.com/Mehmet-Ceran/children-of-simin/main/simin_cover_tr.jpeg"
+            alt="Simin'in Çocukları – Türkçe kapak">
           </div>
           <div> Cover of the Turkish version </div>
         </div>
@@ -499,6 +518,7 @@
   </script>
 </body>
 </html>
+
 
 
 
