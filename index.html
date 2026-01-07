@@ -231,7 +231,40 @@
           width: 85%;
         }
       }
-   
+    .buy-tabs{
+      display:flex;
+      gap:0.75rem;
+      flex-wrap:wrap;
+      margin-top:1rem;
+    }
+    
+    .tab-btn{
+      cursor:pointer;
+      padding:0.6rem 1rem;
+      border-radius:999px;
+      border:1px solid #283445;
+      background: rgba(11,15,21,0.85);
+      color:#e9edf1;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      font-size:0.85rem;
+    }
+    
+    .tab-btn.active{
+      border-color:#ffd271;
+      color:#231815;
+      background:#ffd271;
+    }
+    
+    .tab-btn.disabled{
+      opacity:0.4;
+      cursor:not-allowed;
+    }
+    
+    .buy-panel{
+      margin-top:0.75rem;
+    }
+
   </style>
 </head>
 <body>
@@ -267,10 +300,25 @@
           <p class="muted">
             A grounded fantasy about power, guilt, and the courage of forgotten people – with no dragons, no magic, only humans trying to stay human.
           </p>
-          <div class="cta-buttons">
-            <!-- Replace the # with your real Amazon links when ready -->
-            <a href="#" class="btn">Buy on Amazon</a>
-            <a href="#sample" class="btn btn-outline">Read a Free Sample</a>
+          <div class="buy-tabs">
+            <button class="tab-btn active" type="button" onclick="showFormat('ebook')">
+              Buy eBook (Amazon)
+            </button>
+            <button class="tab-btn disabled" type="button">
+              Buy Paperback (Coming Soon)
+            </button>
+          </div>
+          
+          <div id="buy-ebook" class="buy-panel active">
+            <p class="muted" style="margin-top:0.75rem;">
+              Read instantly on Kindle.
+            </p>
+            <a class="btn"
+               href="https://www.amazon.com/dp/B0GF8V2GG7"
+               target="_blank"
+               rel="noopener">
+              Buy eBook on Amazon
+            </a>
           </div>
         </div>
         <div class="book-mockup">
@@ -546,9 +594,15 @@
   <script>
     // Set current year in footer automatically
     document.getElementById("year").textContent = new Date().getFullYear();
+
+      function showFormat(format) {
+      // Only ebook exists for now, so this is future-proof
+    }
+
   </script>
 </body>
 </html>
+
 
 
 
