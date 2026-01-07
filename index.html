@@ -264,6 +264,12 @@
     .buy-panel{
       margin-top:0.75rem;
     }
+    
+    .disabled-btn {
+      opacity: 0.45;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
 
   </style>
 </head>
@@ -300,26 +306,26 @@
           <p class="muted">
             A grounded fantasy about power, guilt, and the courage of forgotten people – with no dragons, no magic, only humans trying to stay human.
           </p>
-          <div class="buy-tabs">
-            <button class="tab-btn active" type="button" onclick="showFormat('ebook')">
-              Buy eBook (Amazon)
-            </button>
-            <button class="tab-btn disabled" type="button">
-              Buy Paperback (Coming Soon)
-            </button>
-          </div>
-          
-          <div id="buy-ebook" class="buy-panel active">
-            <p class="muted" style="margin-top:0.75rem;">
+            <p class="muted" style="margin-top:1rem;">
               Read instantly on Kindle.
             </p>
-            <a class="btn"
-               href="https://www.amazon.com/dp/B0GF8V2GG7"
-               target="_blank"
-               rel="noopener">
-              Buy eBook on Amazon
-            </a>
-          </div>
+            
+            <div class="cta-buttons">
+              <!-- Active ebook -->
+              <a class="btn"
+                 href="https://www.amazon.com/dp/B0GF8V2GG7"
+                 target="_blank"
+                 rel="noopener">
+                Buy eBook on Amazon
+              </a>
+            
+              <!-- Inactive paperback -->
+              <span class="btn btn-outline disabled-btn">
+                Buy Paperback (Coming Soon)
+              </span>
+            </div>
+
+          
         </div>
         <div class="book-mockup">
           <div class="book-rectangle" style="padding:0; background:none; border:none;">
@@ -602,6 +608,7 @@
   </script>
 </body>
 </html>
+
 
 
 
